@@ -1,12 +1,11 @@
-# pygameを読み込む
 import pygame
 
-# 自作クラスGameを読み込む
 from game import Game
 
 # 画面のサイズ
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 576
+
 
 def main():
     """
@@ -17,7 +16,7 @@ def main():
     pygame.init()
 
     # 画面のサイズを設定
-    screen = pygame.display.set_mode((SCREEN_WIDTH,SCREEN_HEIGHT))
+    screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     # 画面のタイトルを設定
     pygame.display.set_caption("PACMAN")
 
@@ -41,5 +40,6 @@ def main():
     # 実行フラグがFalseになったらpygameのquit関数を実行。ゲームが終了する。
     pygame.quit()
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
