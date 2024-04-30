@@ -1,6 +1,6 @@
 import pygame
 from player import Player
-from enemies import environment, draw_enviroment, Block, Ellipse, Slime, GREEN
+from enemies import environment, draw_environment, Block, Ellipse, Slime, GREEN
 
 # 画面のサイズ
 SCREEN_WIDTH = 800
@@ -201,7 +201,7 @@ class Game(object):
             # 垂直方向のブロックを描画
             self.vertical_blocks.draw(screen)
             # その他の環境を描画
-            draw_enviroment(screen)
+            draw_environment(screen)
             # ドットを描画
             self.dots_group.draw(screen)
             # 敵を描画

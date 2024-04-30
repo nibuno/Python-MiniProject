@@ -148,7 +148,7 @@ def environment():
     return grid
 
 
-def draw_enviroment(screen):
+def draw_environment(screen):
     for i, row in enumerate(environment()):
         for j, item in enumerate(row):
             # ステージで「1」「2」と定義されている場所に線を描画
