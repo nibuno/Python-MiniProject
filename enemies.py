@@ -110,7 +110,7 @@ class Slime(pygame.sprite.Sprite):
         items = []
         # ステージ上の物体を一つずつ確かめていく
         # 行をみていく
-        for i, row in enumerate(enviroment()):
+        for i, row in enumerate(environment()):
             # 列を見ていく
             for j, item in enumerate(row):
                 # ステージで「3」と定義されている場所に敵を配置
@@ -120,7 +120,7 @@ class Slime(pygame.sprite.Sprite):
         return items
 
 
-def enviroment():
+def environment():
     """
     ステージを定義
     """
@@ -149,7 +149,7 @@ def enviroment():
 
 
 def draw_enviroment(screen):
-    for i, row in enumerate(enviroment()):
+    for i, row in enumerate(environment()):
         for j, item in enumerate(row):
             # ステージで「1」「2」と定義されている場所に線を描画
             if item == 1:

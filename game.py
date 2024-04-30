@@ -1,6 +1,6 @@
 import pygame
 from player import Player
-from enemies import enviroment, draw_enviroment, Block, Ellipse, Slime, GREEN
+from enemies import environment, draw_enviroment, Block, Ellipse, Slime, GREEN
 
 # 画面のサイズ
 SCREEN_WIDTH = 800
@@ -47,7 +47,7 @@ class Game(object):
         self.dots_group = pygame.sprite.Group()
 
         # ブロックの描画
-        for i, row in enumerate(enviroment()):
+        for i, row in enumerate(environment()):
             for j, item in enumerate(row):
                 if item == 1:
                     self.horizontal_blocks.add(
@@ -71,7 +71,7 @@ class Game(object):
         self.enemies.add(Slime(448, 320, 2, 0))
 
         # ドットの描画
-        for i, row in enumerate(enviroment()):
+        for i, row in enumerate(environment()):
             for j, item in enumerate(row):
                 if item != 0:
                     self.dots_group.add(Ellipse(j * 32 + 12, i * 32 + 12, WHITE, 8, 8))
